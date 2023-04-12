@@ -1,7 +1,7 @@
-import React from 'react';
+import {useState} from 'react';
 
 const Cart = (props) => {
-  console.log(props.name)
+  let [price,setPrice] = useState(0)
   return (
     <>
       <div className="cart">
@@ -14,11 +14,11 @@ const Cart = (props) => {
                 {props.price}
               </span>
               <div className="center">
-                <button onClick={()=> props.setQuantity(-1)}>
+                <button onClick={()=> setPrice(price === 0 ? 0 : --price)}>
                   -
                 </button>
-                <span>{props.quantity}</span>
-                <button onClick={() => props.setQuantity(1)}>
+                <span>{price}</span>
+                <button onClick={()=> setPrice(++price)}>
                   +
                 </button>
               </div>

@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Total = () => {
+const Total = (props) => {
    return (
       <div>
          <div className="total-box">
             <h2>Total</h2>
             <span>
-               <sup>₹</sup>20
+               <sup>₹</sup>{props.total}
             </span>
             <div className="center"></div>
          </div>
