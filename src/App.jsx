@@ -31,10 +31,10 @@ function App() {
     <div className="abcd">
       {object.map((v, i) => {
         return <>
-          <Cart name={v.name} price={v.price}  />
+          <Cart name={v.name} price={v.price} setTotal={setTotal} total={total}  />
         </>
       })}
-      <Total total={total} setTotal={setTotal} />
+      <Total total={total} />
     </div>
   );
 }
